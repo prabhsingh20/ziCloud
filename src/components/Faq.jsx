@@ -9,7 +9,7 @@ function Faq() {
   };
 
   return (
-    <section className="mb-36 mt-16 px-4">
+    <section className="mb-36 mt-20 px-4">
       <h1 className="inline-block bg-gradient-theme bg-clip-text text-5xl text-[28px] font-bold text-transparent">
         FAQ
       </h1>

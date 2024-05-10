@@ -7,7 +7,7 @@ function RnFSection() {
         </h1>
 
         <div className="flex flex-col  items-center justify-center gap-8">
-          <ul className="mt-8 flex  cursor-pointer flex-wrap gap-x-12 gap-y-4 text-xl font-medium text-secondary">
+          <ul className="mt-12 flex cursor-pointer flex-wrap gap-x-12 gap-y-4 text-xl font-medium text-secondary">
             <li className="border-b-2 border-main pb-2 text-xl font-bold text-main">
               Study
             </li>
