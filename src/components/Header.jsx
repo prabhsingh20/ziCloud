@@ -30,6 +30,13 @@ function Header() {
         <ul
           className={`fixed left-0 top-0 z-10 flex h-screen w-screen flex-col items-center justify-center gap-10 bg-white  ${isOpen ? "block" : "hidden"} lg:relative lg:mt-0 lg:flex lg:h-auto lg:w-auto lg:flex-row lg:bg-transparent`}
         >
+          <li>
+            <img
+              className="lg:hidden"
+              src="/companyLogo.png"
+              alt="companyLogo.png"
+            />
+          </li>
           <li className="mr-4">
             <a href="#">Home</a>
           </li>
@@ -42,9 +49,11 @@ function Header() {
           <li>
             <a href="#">FAQ</a>
           </li>
-          <button className="rounded-[32px] bg-gradient-theme px-10 py-3 font-medium text-white">
-            Login
-          </button>
+          <li>
+            <button className="rounded-[32px] bg-gradient-theme px-10 py-3 font-medium text-white">
+              Login
+            </button>
+          </li>
         </ul>
 
         {/* Login button */}
