@@ -10,17 +10,17 @@ function Faq() {
 
   return (
     <section className="mb-36 mt-16 px-4">
-      <h1 className="bg-gradient-theme inline-block bg-clip-text text-5xl text-[28px] font-bold text-transparent">
+      <h1 className="inline-block bg-gradient-theme bg-clip-text text-5xl text-[28px] font-bold text-transparent">
         FAQ
       </h1>
       <div>
         {questionsArray.map((questions, index) => (
           <div
             key={questions.id}
-            className="mt-8 flex w-[848px] cursor-pointer flex-col justify-center gap-4 rounded-xl border-[1px] border-[#217EEC] "
+            className="mt-8 flex cursor-pointer flex-col justify-center gap-4 rounded-xl border-[1px] border-[#217EEC] lg:w-[848px] "
           >
             <h1
-              className="text-faq flex items-center justify-between px-4 py-4 text-base font-semibold"
+              className="flex items-center justify-between px-4 py-4 text-base font-semibold text-faq"
               onClick={() => toggleAnswer(index)}
             >
               {questions.question}
@@ -33,7 +33,7 @@ function Faq() {
               )}
             </h1>
             {openQuestionIndex === index && (
-              <p className="text-secondary flex items-center justify-between px-4 pb-4 text-sm font-medium">
+              <p className="flex items-center justify-between px-4 pb-4 text-sm font-medium text-secondary">
                 {questions.answer}
               </p>
             )}
