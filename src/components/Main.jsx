@@ -1,13 +1,9 @@
-import Dropdown from "./Dropdown";
-import Faq from "./Faq";
-import RnFSection from "./RnFSection";
+import { Outlet } from "react-router-dom";
 
 function Main() {
   return (
-    <main>
-      <Dropdown />
-      <RnFSection />
-      <Faq />
+    <main className="hide-scrollbar h-screen overflow-scroll rounded-3xl bg-chatAreaBackground">
+      <Outlet />
     </main>
   );
 }
