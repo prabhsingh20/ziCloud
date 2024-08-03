@@ -1,9 +1,9 @@
 function Calender() {
   return (
-    <div>
+    <div className="grid h-screen items-center justify-center text-primaryText">
       Calender
     </div>
-  )
+  );
 }
 
-export default Calender
+export default Calender;

@@ -15,7 +15,7 @@ function ChatsList({ chat }) {
 
   return (
     <li
-      className="mt-4 flex w-full cursor-pointer items-center space-x-4 rounded-2xl bg-chatAreaBackground px-4 py-3"
+      className="mt-4 flex w-full cursor-pointer items-center space-x-4 rounded-2xl px-4 py-3 hover:bg-chatAreaBackground"
       onClick={handleOpenChat}
     >
       <img src={img} alt="" className="h-14 rounded-xl" />

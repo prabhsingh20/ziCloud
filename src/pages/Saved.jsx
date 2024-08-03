@@ -1,9 +1,9 @@
 function Saved() {
   return (
-    <div>
+    <div className="grid h-screen items-center justify-center text-primaryText">
       Saved
     </div>
-  )
+  );
 }
 
-export default Saved
+export default Saved;

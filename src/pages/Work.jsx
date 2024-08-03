@@ -1,5 +1,9 @@
 function Work() {
-  return <div>Work</div>;
+  return (
+    <div className="grid h-screen items-center justify-center text-primaryText">
+      Work
+    </div>
+  );
 }
 
 export default Work;
