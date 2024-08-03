@@ -30,7 +30,7 @@ function Details() {
         {silent ? (
           <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
             <BellSlashIcon
-              className="h-6 rounded-2xl "
+              className="h-6 rounded-2xl text-errorRed"
               onClick={() => setSilent(!silent)}
             />
           </span>
