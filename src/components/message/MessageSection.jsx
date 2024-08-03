@@ -11,7 +11,7 @@ function MessageSection() {
   };
 
   return (
-    <div className="flex flex-col justify-between px-6">
+    <div className=" flex h-screen flex-col justify-between pb-4 pl-3 pr-6 pt-8">
       <Header />
       <MessageList messages={messages} />
       <Input addMessage={addMessage} />

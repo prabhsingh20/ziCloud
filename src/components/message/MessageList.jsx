@@ -1,6 +1,6 @@
 const MessageList = ({ messages }) => {
   return (
-    <div className="mt-4 flex flex-grow flex-col-reverse gap-2">
+    <div className="hide-scrollbar mt-4 flex h-full flex-grow flex-col-reverse gap-2 overflow-scroll">
       {messages.map((message, index) => (
         <div
           key={index}

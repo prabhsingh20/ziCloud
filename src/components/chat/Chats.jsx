@@ -3,7 +3,7 @@ import Profiles from "./Profiles";
 
 function Chats() {
   return (
-    <div className="flex w-[340px] flex-col gap-4 px-2">
+    <div className="hide-scrollbar flex h-screen w-[340px] flex-col gap-4 overflow-scroll px-4 py-6">
       <SearchBar />
       <div>
         <Profiles />

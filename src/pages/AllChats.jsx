@@ -5,7 +5,7 @@ import MessageSection from "../components/message/MessageSection";
 function AllChats() {
   const { openChat } = useChat();
   return (
-    <div className="grid grid-cols-[auto_1fr] space-x-8  px-4 py-8">
+    <div className="grid grid-cols-[auto_1fr] space-x-8">
       <Chats />
       {openChat ? (
         <MessageSection />
