@@ -3,36 +3,66 @@ import {
   CalendarDateRangeIcon,
   ChartBarIcon,
   VideoCameraSlashIcon,
+  VideoCameraIcon,
   XMarkIcon,
+  BellSlashIcon,
 } from "@heroicons/react/16/solid";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { useChat } from "../ChatProvider";
 
 function Details() {
+  const { handleOpen } = useChat();
   const [allFiles, setAllFiles] = useState(false);
   const [allMedia, setAllMedia] = useState(false);
+  const [allowed, setAllowed] = useState(false);
+  const [silent, setSilent] = useState(false);
 
   return (
     <aside className="flex w-72 flex-col space-y-8 px-4 py-6 text-primaryText">
       <header className="flex items-center justify-between text-lg ">
         <h2>Chat Details</h2>
         <span>
-          <XMarkIcon className="h-6 cursor-pointer" />
+          <XMarkIcon className="h-6 cursor-pointer" onClick={handleOpen} />
         </span>
       </header>
       <div className="flex  gap-4">
-        <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
-          <BellIcon className="h-6 rounded-2xl " />
-        </span>
+        {silent ? (
+          <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
+            <BellSlashIcon
+              className="h-6 rounded-2xl "
+              onClick={() => setSilent(!silent)}
+            />
+          </span>
+        ) : (
+          <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
+            <BellIcon
+              className="h-6 rounded-2xl "
+              onClick={() => setSilent(!silent)}
+            />
+          </span>
+        )}
         <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
           <CalendarDateRangeIcon className="h-6" />
         </span>
         <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3">
           <ChartBarIcon className="h-6" />
         </span>
-        <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3 text-errorRed">
-          <VideoCameraSlashIcon className="h-6" />
-        </span>
+        {allowed ? (
+          <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3 ">
+            <VideoCameraIcon
+              className="h-6"
+              onClick={() => setAllowed(!allowed)}
+            />
+          </span>
+        ) : (
+          <span className="cursor-pointer rounded-2xl bg-chatAreaBackground p-3 text-errorRed">
+            <VideoCameraSlashIcon
+              className="h-6"
+              onClick={() => setAllowed(!allowed)}
+            />
+          </span>
+        )}
       </div>
 
       <section className="flex flex-col gap-3 ">

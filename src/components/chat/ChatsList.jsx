@@ -1,7 +1,14 @@
+import { useChat } from "../ChatProvider";
+
 function ChatsList({ chat }) {
   const { img, fullName, message, minAgo } = chat;
+  const { handleOpenChat } = useChat();
+
   return (
-    <li className="mt-4 flex cursor-pointer items-center space-x-4 rounded-2xl bg-selectedMessageBackground px-4 py-3">
+    <li
+      className="mt-4 flex cursor-pointer items-center space-x-4 rounded-2xl  bg-chatAreaBackground px-4 py-3"
+      onClick={handleOpenChat}
+    >
       <img src={img} alt="" className="h-14 rounded-xl" />
       <div className="flex w-full flex-col space-y-1">
         <div className="flex items-center justify-between text-primaryText">
