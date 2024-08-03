@@ -6,13 +6,15 @@ export const ChatProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [openChat, setOpenChat] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedChat, setSelectedChat] = useState(null); // New state for selected chat
 
   function handleOpen() {
     setIsOpen(!isOpen);
   }
 
-  function handleOpenChat() {
-    setOpenChat(!openChat);
+  function handleOpenChat(chat) {
+    setOpenChat(true);
+    setSelectedChat(chat);
   }
 
   return (
@@ -24,6 +26,7 @@ export const ChatProvider = ({ children }) => {
         handleOpenChat,
         searchTerm,
         setSearchTerm,
+        selectedChat, // Provide selectedChat in context
       }}
     >
       {children}
